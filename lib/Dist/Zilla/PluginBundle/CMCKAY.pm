@@ -1,57 +1,13 @@
 package Dist::Zilla::PluginBundle::CMCKAY;
+BEGIN {
+  $Dist::Zilla::PluginBundle::CMCKAY::VERSION = '0.02';
+}
 use Moose;
 # ABSTRACT: Dist::Zilla configuration the way CMCKAY does it
 
 use Dist::Zilla;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
-=head1 SYNOPSIS
-
-    # dist.ini
-    [@CMCKAY]
-    dist = Dist-Zilla-PluginBundle-CMCKAY
-
-=head1 DESCRIPTION
-
-Roughly equivilant to a dist.ini containing
-
-    [@Basic]
-
-    # metadata
-    [MetaConfig]
-    [MetaJSON]
-    #[MetaYAML]
-
-    # versioning
-    [NextRelease]
-    format = %-5v %{yyyy-MM-dd}d
-    [CheckChangesHasContent]
-    [PkgVersion]
-
-    # testing
-    [PodCoverageTests]
-    [PodSyntaxTests]
-    [NoTabsTests]
-    [EOLTests]
-    [CompileTests]
-
-    # Repository
-    [Repository]
-    git_remote = git://github.com/Potatohead/${lowercase_dist}
-    github_http = 0
-    [Git::Check]
-    allow_dirty =
-    [Git::Tag]
-    tag_format = %v
-    tag_message =
-    [BumpVersionFromGit]
-    version_regexp = ^(\d+\.\d+)$
-    first_version = 0.01
-
-    # documentation
-    [PodWeaver]
-
-=cut
 
 has dist => (
     is       => 'ro',
@@ -186,19 +142,93 @@ sub configure {
     );
 }
 
-=head1 SEE ALSO
-
-L<Dist::Zilla>
-
-=begin Pod::Coverage
-
-    configure
-
-=end Pod::Coverage
-
-=cut
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
 1;
+
+__END__
+=pod
+
+=head1 NAME
+
+Dist::Zilla::PluginBundle::CMCKAY - Dist::Zilla configuration the way CMCKAY does it
+
+=head1 VERSION
+
+version 0.02
+
+=head1 SYNOPSIS
+
+    # dist.ini
+    [@CMCKAY]
+    dist = Dist-Zilla-PluginBundle-CMCKAY
+
+=head1 DESCRIPTION
+
+Roughly equivilant to a dist.ini containing
+
+    [@Basic]
+
+    # metadata
+    [MetaConfig]
+    [MetaJSON]
+    #[MetaYAML]
+
+    # versioning
+    [NextRelease]
+    format = %-5v %{yyyy-MM-dd}d
+    [CheckChangesHasContent]
+    [PkgVersion]
+
+    # testing
+    [PodCoverageTests]
+    [PodSyntaxTests]
+    [NoTabsTests]
+    [EOLTests]
+    [CompileTests]
+
+    # Repository
+    [Repository]
+    git_remote = git://github.com/Potatohead/${lowercase_dist}
+    github_http = 0
+    [Git::Check]
+    allow_dirty =
+    [Git::Tag]
+    tag_format = %v
+    tag_message =
+    [BumpVersionFromGit]
+    version_regexp = ^(\d+\.\d+)$
+    first_version = 0.01
+
+    # documentation
+    [PodWeaver]
+
+=for Pod::Coverage     configure
+
+=head1 SEE ALSO
+
+Please see those modules/websites for more information related to this module.
+
+=over 4
+
+=item *
+
+L<Dist::Zilla>
+
+=back
+
+=head1 AUTHOR
+
+Christopher Mckay <potatohead@potatolan.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Christopher Mckay.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

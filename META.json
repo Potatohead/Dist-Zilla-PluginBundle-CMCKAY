@@ -1,0 +1,232 @@
+{
+   "abstract" : "Dist::Zilla configuration the way CMCKAY does it",
+   "author" : [
+      "Christopher Mckay <potatohead@potatolan.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-PluginBundle-CMCKAY",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla::Plugin::BumpVersionFromGit" : 0,
+            "Dist::Zilla::Plugin::CheckChangesHasContent" : 0,
+            "Dist::Zilla::Plugin::CompileTests" : 0,
+            "Dist::Zilla::Plugin::EOLTests" : 0,
+            "Dist::Zilla::Plugin::Git" : 0,
+            "Dist::Zilla::Plugin::NoTabsTests" : 0,
+            "Dist::Zilla::Plugin::PodWeaver" : 0,
+            "Dist::Zilla::Plugin::Repository" : "0.12"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Potatohead/dist-zilla-pluginbundle-cmckay.git",
+         "web" : "http://github.com/Potatohead/dist-zilla-pluginbundle-cmckay"
+      }
+   },
+   "version" : "0.02",
+   "x_Dist_Zilla" : {
+      "plugins" : [
+         {
+            "class" : "Dist::Zilla::Plugin::GatherDir",
+            "name" : "@CMCKAY/@Filter/GatherDir",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PruneCruft",
+            "name" : "@CMCKAY/@Filter/PruneCruft",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ManifestSkip",
+            "name" : "@CMCKAY/@Filter/ManifestSkip",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MetaYAML",
+            "name" : "@CMCKAY/@Filter/MetaYAML",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::License",
+            "name" : "@CMCKAY/@Filter/License",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Readme",
+            "name" : "@CMCKAY/@Filter/Readme",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ExtraTests",
+            "name" : "@CMCKAY/@Filter/ExtraTests",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ExecDir",
+            "name" : "@CMCKAY/@Filter/ExecDir",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ShareDir",
+            "name" : "@CMCKAY/@Filter/ShareDir",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MakeMaker",
+            "name" : "@CMCKAY/@Filter/MakeMaker",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Manifest",
+            "name" : "@CMCKAY/@Filter/Manifest",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::TestRelease",
+            "name" : "@CMCKAY/@Filter/TestRelease",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ConfirmRelease",
+            "name" : "@CMCKAY/@Filter/ConfirmRelease",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FakeRelease",
+            "name" : "@CMCKAY/FakeRelease",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MetaConfig",
+            "name" : "@CMCKAY/MetaConfig",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MetaJSON",
+            "name" : "@CMCKAY/MetaJSON",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::NextRelease",
+            "name" : "@CMCKAY/NextRelease",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::CheckChangesHasContent",
+            "name" : "@CMCKAY/CheckChangesHasContent",
+            "version" : "0.003"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PkgVersion",
+            "name" : "@CMCKAY/PkgVersion",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PodCoverageTests",
+            "name" : "@CMCKAY/PodCoverageTests",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PodSyntaxTests",
+            "name" : "@CMCKAY/PodSyntaxTests",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::NoTabsTests",
+            "name" : "@CMCKAY/NoTabsTests",
+            "version" : "0.01"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::EOLTests",
+            "name" : "@CMCKAY/EOLTests",
+            "version" : "0.02"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::CompileTests",
+            "name" : "@CMCKAY/CompileTests",
+            "version" : "1.103030"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Repository",
+            "name" : "@CMCKAY/Repository",
+            "version" : "0.17"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Git::Check",
+            "name" : "@CMCKAY/Git::Check",
+            "version" : "1.103520"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Git::Tag",
+            "name" : "@CMCKAY/Git::Tag",
+            "version" : "1.103520"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::BumpVersionFromGit",
+            "name" : "@CMCKAY/BumpVersionFromGit",
+            "version" : "0.008"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::PodWeaver",
+            "name" : "@CMCKAY/PodWeaver",
+            "version" : "3.101641"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Prereqs",
+            "config" : {
+               "Dist::Zilla::Plugin::Prereqs" : {
+                  "phase" : "runtime",
+                  "type" : "requires"
+               }
+            },
+            "name" : "Prereqs",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":InstallModules",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":TestFiles",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":ExecFiles",
+            "version" : "4.200000"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":ShareFiles",
+            "version" : "4.200000"
+         }
+      ],
+      "zilla" : {
+         "class" : "Dist::Zilla::Dist::Builder",
+         "config" : {
+            "is_trial" : 0
+         },
+         "version" : "4.200000"
+      }
+   }
+}
+

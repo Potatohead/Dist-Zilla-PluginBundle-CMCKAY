@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-CMCKAY
 
-{{$NEXT}}
+0.02  2011-02-05
+      - Converting from pure dzil so I can install this thing on empty perl
+        installs
 
 0.01  2011-01-18
       - Initial release

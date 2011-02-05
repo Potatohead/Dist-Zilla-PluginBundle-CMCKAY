@@ -154,6 +154,7 @@ sub configure {
         map { [ $_ => ($self->plugin_options->{$_} || {}) ] }
             @{ $self->extra_plugins },
     );
+    $self->add_plugins('AutoPrereqs') if $self->auto_prereqs;
 }
 
 

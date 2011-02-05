@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::CMCKAY;
 BEGIN {
-  $Dist::Zilla::PluginBundle::CMCKAY::VERSION = '0.02';
+  $Dist::Zilla::PluginBundle::CMCKAY::VERSION = '0.03';
 }
 use Moose;
 # ABSTRACT: Dist::Zilla configuration the way CMCKAY does it
@@ -39,6 +39,20 @@ has github_url => (
         $dist = lc($dist);
         "git://github.com/Potatohead/$dist.git";
     },
+);
+
+#backcompat
+has auto_prereq => (
+    is      => 'ro',
+    isa     => 'Bool',
+    default => 1,
+);
+
+has auto_prereqs => (
+    is      => 'ro',
+    isa     => 'Bool',
+    lazy    => 1,
+    default => sub { shift->auto_prereq },
 );
 
 has extra_plugins => (
@@ -157,7 +171,7 @@ Dist::Zilla::PluginBundle::CMCKAY - Dist::Zilla configuration the way CMCKAY doe
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -211,13 +225,7 @@ Roughly equivilant to a dist.ini containing
 
 Please see those modules/websites for more information related to this module.
 
-=over 4
-
-=item *
-
 L<Dist::Zilla>
-
-=back
 
 =head1 AUTHOR
 

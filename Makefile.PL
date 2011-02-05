@@ -27,6 +27,7 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Plugin::Git' => '0',
     'Dist::Zilla::Plugin::NoTabsTests' => '0',
     'Dist::Zilla::Plugin::PodWeaver' => '0',
+    'Pod::Weaver::Section::SeeAlso' => '0',
     'Dist::Zilla::Plugin::Repository' => '0.12'
   },
   'VERSION' => '0.02',
